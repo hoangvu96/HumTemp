@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.temphum"
+        applicationId "com.example.temphummqtt"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -19,7 +19,9 @@ android {
 }
 
 repositories {
-    maven { url "https://jitpack.io" }
+    maven {
+        url "https://repo.eclipse.org/content/repositories/paho-releases/"
+    }
 }
 
 dependencies {
@@ -29,13 +31,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-    // Retrofit
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-
-// JSON Parsing
-    compile 'com.google.code.gson:gson:2.6.1'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+    compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 }

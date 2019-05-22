@@ -1,4 +1,4 @@
-package com.example.temphum;
+package com.example.temphummqtt;
 
 import org.junit.Test;
 
