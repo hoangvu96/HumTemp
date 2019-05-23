@@ -92,7 +92,6 @@ public class MQTTHelper {
             mqttAndroidClient.subscribe(Constan.TOPIC_GET, 0, null, new IMqttActionListener() {
                 @Override
                 public void onSuccess(IMqttToken asyncActionToken) {
-                    Toast.makeText(context, "thanh cong", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
